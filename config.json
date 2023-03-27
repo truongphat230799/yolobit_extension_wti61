@@ -1,0 +1,12 @@
+{
+    "name": "MPU6050",
+    "description": "Mục mở rộng dành cho cảm biến gia tốc WTI61",
+    "libs": [
+        "yolobit_wti61.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "poster": "poster.png"
+}

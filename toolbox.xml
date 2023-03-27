@@ -1,0 +1,14 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="MOTION" colour="#2ECC71" icon="compass">
+    <block type="yolobit_motion_start"/>
+    <block type="yolobit_motion_reset"/>
+    <block type="yolobit_get_angle"/>
+    <block type="yolobit_wait_angle">
+      <value name="wait_angle">
+        <shadow type="math_number">
+          <field name="NUM">20</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</xml>

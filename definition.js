@@ -238,7 +238,7 @@ Blockly.Blocks['yolobit_wait_angle'] = {
       this.jsonInit(
         {
             "type": "yolobit_wait_angle",
-            "message0": "chờ đến góc %1%2",
+            "message0": "chờ khi góc xoay %1%2",
             "args0": [
               {
                 "type": "field_dropdown",

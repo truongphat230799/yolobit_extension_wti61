@@ -100,5 +100,3 @@ class Motion:
             if time.ticks_ms() - time_start > 2500:
                 print('Wait angle timeout')
                 return
-
-motion = Motion()

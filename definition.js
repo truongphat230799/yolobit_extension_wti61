@@ -186,7 +186,7 @@ Blockly.Blocks['yolobit_motion_start'] = {
     var rx = block.getFieldValue('RX');
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
     Blockly.Python.definitions_['import_motion_wti61'] = 'from yolobit_wti61 import Motion';
-    Blockly.Python.definitions_['create_motion'] = 'angle = (tx=' + tx + '.pin, rx=' + rx + '.pin)';
+    Blockly.Python.definitions_['create_motion'] = 'angle = Motion(tx=' + tx + '.pin, rx=' + rx + '.pin)';
     var code = '';
     return code;
 };

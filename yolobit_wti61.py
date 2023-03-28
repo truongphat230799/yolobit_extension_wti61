@@ -39,7 +39,7 @@ class Motion:
         both_sign = False: Angle return will be 0-360
     '''
     def get_angle(self, both_sign=True):
-        #self.flush()
+        self.flush()
         time_start = time.ticks_ms()
         counter = 0
         while True:

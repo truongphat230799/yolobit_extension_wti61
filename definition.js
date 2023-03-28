@@ -185,8 +185,8 @@ Blockly.Blocks['yolobit_motion_start'] = {
     var tx = block.getFieldValue('TX');
     var rx = block.getFieldValue('RX');
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
-    Blockly.Python.definitions_['import_motion_wti61'] = 'from yolobit_wti61 import *';
-    Blockly.Python.definitions_['create_motion'] = 'motion = machine.UART(2, bits=8, parity=None, stop=1, baudrate=115200, rx=' + rx + '.pin, tx=' + tx + '.pin)';
+    Blockly.Python.definitions_['import_motion_wti61'] = 'from yolobit_wti61 import Motion';
+    Blockly.Python.definitions_['create_motion'] = 'angle = (tx=' + tx + '.pin, rx=' + rx + '.pin)';
     var code = '';
     return code;
 };
@@ -208,7 +208,7 @@ Blockly.Blocks['yolobit_motion_reset'] = {
 };
 Blockly.Python['yolobit_motion_reset'] = function(block) {
     // TODO: Assemble Python into code variable.
-    var code = 'motion.reset_angle()\n';
+    var code = 'angle.reset_angle()\n';
     return code;
   };
   Blockly.Blocks['yolobit_get_angle'] = {
@@ -228,7 +228,7 @@ Blockly.Python['yolobit_motion_reset'] = function(block) {
 
 Blockly.Python['yolobit_get_angle'] = function(block) {
     // TODO: Assemble Python into code variable.
-    var code = 'motion.get_angle()';
+    var code = 'angle.get_angle()';
     // TODO: Change ORDER_NONE to the correct strength.
     return [code, Blockly.Python.ORDER_NONE];
 };
@@ -259,7 +259,7 @@ Blockly.Blocks['yolobit_wait_angle'] = {
 Blockly.Python['yolobit_wait_angle'] = function(block) {
   var wait_angle = Blockly.Python.valueToCode(block, 'wait_angle', Blockly.Python.ORDER_ATOMIC);
     // TODO: Assemble Python into code variable.
-  var code = 'motion.wait_angle('+wait_angle+')';
+  var code = 'angle.wait_angle('+wait_angle+')';
     // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
   };

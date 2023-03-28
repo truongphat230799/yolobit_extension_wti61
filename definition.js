@@ -238,8 +238,30 @@ Blockly.Blocks['yolobit_wait_angle'] = {
       this.jsonInit(
         {
             "type": "yolobit_wait_angle",
-            "message0": "chờ đến góc %1",
+            "message0": "chờ đến góc %1%2",
             "args0": [
+              {
+                "type": "field_dropdown",
+                "name": "logic",
+                "options": [
+                  [
+                    ">",
+                    ">"
+                  ],
+                  [
+                    "<",
+                    "<"
+                  ],
+                  [
+                    "≥",
+                    ">="
+                  ],
+                  [
+                    "≤",
+                    "<="
+                  ]
+                ]
+              },
               {
                 min: 0,
                 type: "input_value",
@@ -248,7 +270,8 @@ Blockly.Blocks['yolobit_wait_angle'] = {
                 name: "wait_angle",
               }
             ],
-            "output": null,
+            "previousStatement": null,
+            "nextStatement": null,
             "colour": ColorBlock,
             "tooltip": "",
             "helpUrl": ""
@@ -258,8 +281,9 @@ Blockly.Blocks['yolobit_wait_angle'] = {
 };
 Blockly.Python['yolobit_wait_angle'] = function(block) {
   var wait_angle = Blockly.Python.valueToCode(block, 'wait_angle', Blockly.Python.ORDER_ATOMIC);
+  var logic = block.getFieldValue('logic');
     // TODO: Assemble Python into code variable.
-  var code = 'angle.wait_angle('+wait_angle+')';
+  var code = 'wait_for(lambda: angle.get_angle() ' + logic+'angle.wait_angle('+wait_angle+')';
     // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.Python.ORDER_NONE];
+  return code;
   };

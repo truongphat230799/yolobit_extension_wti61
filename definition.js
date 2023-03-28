@@ -245,14 +245,6 @@ Blockly.Blocks['yolobit_wait_angle'] = {
                 "name": "logic",
                 "options": [
                   [
-                    ">",
-                    ">"
-                  ],
-                  [
-                    "<",
-                    "<"
-                  ],
-                  [
                     "≥",
                     ">="
                   ],
@@ -283,7 +275,7 @@ Blockly.Python['yolobit_wait_angle'] = function(block) {
   var wait_angle = Blockly.Python.valueToCode(block, 'wait_angle', Blockly.Python.ORDER_ATOMIC);
   var logic = block.getFieldValue('logic');
     // TODO: Assemble Python into code variable.
-  var code = 'wait_for(lambda: angle.get_angle() ' + logic+'angle.wait_angle('+wait_angle+')';
+  var code = 'wait_for(lambda: angle.get_angle()' + logic+'angle.wait_angle('+wait_angle+')';
     // TODO: Change ORDER_NONE to the correct strength.
   return code;
   };

@@ -186,7 +186,7 @@ Blockly.Blocks['yolobit_motion_start'] = {
     var rx = block.getFieldValue('RX');
     Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
     Blockly.Python.definitions_['import_motion_wti61'] = 'from yolobit_wti61 import *';
-    Blockly.Python.definitions_['create_motion'] = 'motion = machine.UART(2, baudrate=9600, rx=' + rx + '.pin, tx=' + tx + '.pin)';
+    Blockly.Python.definitions_['create_motion'] = 'motion = machine.UART(2, bits=8, parity=None, stop=1, baudrate=115200, rx=' + rx + '.pin, tx=' + tx + '.pin)';
     var code = '';
     return code;
 };

@@ -196,7 +196,7 @@ Blockly.Blocks['yolobit_motion_reset'] = {
       this.jsonInit(
         {
             "type": "yolobit_motion_reset",
-            "message0": "đặt lại giá trị góc",
+            "message0": "đặt giá trị góc về 0",
             "previousStatement": null,
             "nextStatement": null,
             "colour": ColorBlock,
@@ -216,7 +216,7 @@ Blockly.Python['yolobit_motion_reset'] = function(block) {
       this.jsonInit(
         {
             "type": "yolobit_get_angle",
-            "message0": "giá trị góc",
+            "message0": "góc quay hiện tại",
             "output": null,
             "colour": ColorBlock,
             "tooltip": "",

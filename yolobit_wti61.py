@@ -84,7 +84,7 @@ class Motion:
                     break
             else:
                 if distance < wait_angle:
-                    break
+                    continue
                 '''
                 if angle < 1 or angle > 355:
                     #time.sleep_ms(10)

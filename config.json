@@ -1,5 +1,5 @@
 {
-    "name": "MPU6050",
+    "name": "Motion",
     "description": "Mục mở rộng dành cho cảm biến gia tốc WTI61",
     "libs": [
         "yolobit_wti61.py"

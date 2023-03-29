@@ -81,10 +81,10 @@ class Motion:
             print(current_angle, distance)
             if wait_angle > 0:
                 if distance > wait_angle:
-                    return
+                    break
             else:
                 if distance < wait_angle:
-                    return
+                    break
                 '''
                 if angle < 1 or angle > 355:
                     #time.sleep_ms(10)
